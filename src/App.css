@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+.dollarBefore::before {
+  background-image: url('/public/images/icon-dollar.svg');
+  top: 58%;
+  width: 10px;
+}
+
+.personBefore,
+.dollarBefore {
+  position: relative;
+}
+
+.dollarBefore::before,
+.personBefore::before {
+  content: '';
+  position: absolute;
+  background-repeat: no-repeat;
+  left: 10px;
+  height: 15px;
+  z-index: 10;
+}
+
+.personBefore::before {
+  background-image: url('/public/images/icon-person.svg');
+  top: 30%;
+  width: 20px;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
